@@ -9,3 +9,12 @@ Client commands have no good reason to be ran on the server, as they are somethi
 ## What does this plugin do?
 This plugin automatically turns all server commands into client commands (the console can still execute the server commands)<br>
 It only allows admins to run server commands, but that means that you can now pause the server or ban people right from your game!
+
+## License
+This project is licensed under the MIT License.<br>
+
+This means you are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, as long as you include the original copyright notice and this permission notice in any copies or substantial portions of the software.<br>
+
+In short: This software is open-source and can be used in almost any way you wish, but it comes without any warranty.<br>
+
+For more details, see the [LICENSE](https://github.com/RaydanOMGr/ServerToClientCommands/blob/master/LICENSE) file.
