@@ -61,9 +61,21 @@ public class ServerToClientCommandsPlugin extends Plugin {
 
         serverCommands.forEach(c -> {
             if(!hasCommand(clientCommands, c)) {
-                clientHandler.register(c.text, c.paramText, c.description, getRunner(c));
+                clientHandler.<Player>register(c.text, c.paramText, c.description, (args, p) -> { 
+                    if(!p.admin()) {
+                        p.sendMessage("This command can only be run by an admin!");
+                        return;
+                    }
+                    getRunner(c).accept(args, null);
+                });
             }
-            clientHandler.register(serverPrefix + c.text, c.paramText, c.description, getRunner(c));
+            clientHandler.<Player>register(serverPrefix + c.text, c.paramText, c.description, (args, p) -> {
+                    if(!p.admin()) {
+                        p.sendMessage("This command can only be run by an admin!");
+                        return; 
+                    }
+                    getRunner(c).accept(args, null);
+                });
         });
     }
 
