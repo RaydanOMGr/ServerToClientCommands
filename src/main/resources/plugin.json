@@ -1,0 +1,10 @@
+{
+   "displayName": "ServerToClient Commands",
+   "name": "stcc",
+   "author": "AndreasMelone",
+   "main": "me.andreasmelone.stcc.ServerToClientCommandsPlugin",
+   "description": "Allows server admins to use server commands from their clients",
+   "version": "${version}",
+   "minGameVersion": ${minVersion}
+}
+
